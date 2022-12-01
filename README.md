@@ -13,6 +13,7 @@ a geração de uma maçã em uma posição aleatória (por meio do uso de LFSR).
 
 <h2>Sobre a Testbench:</h2>
 A testbench simula uma partida do jogo, setando valores de input que equivalem a interações do usuário com os botões a cada borda de clock. A cobra vai atrás da primeira maçã (em 22 movimentos) e depois colide com a parede do lado direito do tabuleiro, ilustrando uma colisão com maçã e uma colisão fatal. Elas podem ser visualizadas no diagrama de onda da partida elaborada. 
+
 É relativamente complexo fazer simulações desse tipo para cobrir todos os tipos de colisões, uma vez que as maçãs idealmente são aleatórias devido ao LFSR, dificultando a realização de um teste controlado dos inputs que ocasionam tais cenários no jogo. 
 
 
