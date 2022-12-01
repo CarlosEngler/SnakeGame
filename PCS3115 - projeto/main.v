@@ -145,7 +145,7 @@ module main (
 		if(naoLetal) //caso tenha comido 
 		begin
 			tamanho <= tamanho + 7'd1;	
-			corpo[tamanho] <= {headX, headY};	
+			corpo[tamanho-1] <= {headX, headY};	
 			applex <= randomx;
 			appley <= randomy;
 			naoLetal <= 1'd0;
