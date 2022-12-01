@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at NumeroAleatorio.v(24): always construct contains both blocking and non-blocking assignments File: C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/NumeroAleatorio.v Line: 24
+Warning (10268): Verilog HDL information at main.v(84): always construct contains both blocking and non-blocking assignments File: C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/main.v Line: 84
+Warning (10268): Verilog HDL information at main.v(129): always construct contains both blocking and non-blocking assignments File: C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/main.v Line: 129

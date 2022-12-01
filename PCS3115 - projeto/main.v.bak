@@ -1,0 +1,165 @@
+module main (
+	input start,
+	input clk,
+	input [3:0] direcao,
+	output reg game_over
+);
+	
+	reg [3:0] headY, headX;
+	reg [3:0] appley, applex;
+	reg bad_colision;
+	
+	reg good_colision = 1'b0;
+	reg naoLetal = 1'b0;
+	reg [7:0] corpo [0:195];
+	reg [7:0] tamanho;
+	
+	reg delay = 1'b1;
+	
+	integer conter;
+	
+	initial
+	begin
+		headX = 4'd8;
+		headY = 4'd8;
+		game_over = 1'b0;
+		bad_colision = 1'b0;
+		tamanho = 7'd0;
+	end
+
+	//move a posição da cabeça da cobra
+	
+	always @(posedge clk)
+	begin
+		if(~game_over)
+		begin
+			case (direcao)
+			
+				4'b0001: //cima
+				begin
+					headY <= headY + 4'd1;
+				end
+				
+				4'b0010: //esquerda
+				begin
+					headX <= headX - 4'd1;
+				end
+				
+				4'b0100: //baixo
+				begin
+					headY <= headY - 4'd1;
+				end
+				
+				4'b1000: //direita
+				begin
+					headX <= headX + 4'd1;
+				end
+				
+			endcase
+		end
+		
+	end
+	
+	//chamar modulo que atualiza a posicao da maca
+	
+	//verifica se teve alguma colisao letal
+	
+	always @(posedge clk)
+		begin
+		
+		//verificar se bateu na parede 
+		
+		if (headX == 4'b0000)
+		begin
+			 bad_colision <= 1'b1;
+		end
+		
+		else if (headX == 4'b1111)
+		begin
+			 bad_colision <= 1'b1;
+		end
+		
+		else if (headY == 4'b0000)
+			begin
+			 bad_colision <= 1'b1;
+		end
+		
+		else if (headY == 4'b1111)
+			begin
+			 bad_colision <= 1'b1;
+		end
+		
+		//verificar se bateu no corpo
+
+		//for(conter = 0; conter < 10; conter = conter + 1)
+			//begin
+			
+			//if(posicao == tails[conter]) 
+				//begin
+				//bad_colision = 1'b1;
+			//end
+			
+			//else 
+				//begin
+				//bad_colision <= 1'b0;
+			//end
+				
+		//end
+		
+	end
+ 
+ 
+	always @(posedge clk)
+	begin
+		naoLetal = (((headY == appley) && (applex == headX)) && delay);
+		
+		if(~naoLetal) // caso não tenha comido maçã
+		begin
+			for(conter=0; conter<10; conter = conter +1)
+			begin	
+				if(conter<tamanho)
+				begin
+				corpo[conter] <= corpo[conter+1];
+				end
+			end
+			corpo[tamanho] <= {headX, headY}; //ultima posição do vetor recebe a informação da cabeça
+		end
+		
+		if(naoLetal) //caso tenha comido 
+		begin
+			tamanho <= tamanho + 1;	
+			corpo[tamanho] <= {headX, headY};					
+			naoLetal = 1'd0;
+		end
+	end 
+	
+ //adaptar de acordo com a funcao main
+	always @(posedge clk)
+		begin
+	
+		//colisao com a maca
+	
+		if (naoLetal)
+			begin
+			good_colision <= 1'b1; // vou mandar na funcao maca, avisando que precisa gerar nova maca
+			delay = 0;
+		end
+			
+		else if (start)
+			begin
+			good_colision <= 1'b0; // ver essa parte start
+		end
+		  
+		 //colisao fatal
+		  
+		if (bad_colision)
+			begin
+			game_over = 1'b1;
+		end
+	
+		
+	end
+	
+	//se game_over receber 1, acabou o jogo;
+
+endmodule

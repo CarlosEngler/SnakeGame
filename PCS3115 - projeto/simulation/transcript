@@ -1,0 +1,20 @@
+# Compile of InputsBotao.v was successful.
+# Compile of jogando.v was successful.
+# Compile of LFSR.v was successful.
+# Compile of main.v was successful.
+# Compile of NumeroAleatorio.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.InputsBotao work.jogando work.LFSR work.main work.NumeroAleatorio
+# vsim -gui work.InputsBotao work.jogando work.LFSR work.main work.NumeroAleatorio 
+# Start time: 22:25:11 on Nov 30,2022
+# Loading work.InputsBotao
+# Loading work.jogando
+# Loading work.main
+# Loading work.NumeroAleatorio
+# Loading work.LFSR
+add wave -position end sim:/jogando/*
+run -all
+# ** Note: $finish    : C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/jogando.v(44)
+#    Time: 74 ns  Iteration: 0  Instance: /jogando
+# End time: 22:25:31 on Nov 30,2022, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 0

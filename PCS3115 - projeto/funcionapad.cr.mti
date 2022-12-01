@@ -1,0 +1,15 @@
+C:/Users/joaop/OneDrive/Documentos/QUARTUS/PARTEGERAMACA/NumeroAleatorio.v {1 {vlog -work work -stats=none C:/Users/joaop/OneDrive/Documentos/QUARTUS/PARTEGERAMACA/NumeroAleatorio.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module NumeroAleatorio
+
+Top level modules:
+	NumeroAleatorio
+
+} {} {}} C:/Users/joaop/OneDrive/Documentos/QUARTUS/PARTEGERAMACA/LFSR.v {1 {vlog -work work -stats=none C:/Users/joaop/OneDrive/Documentos/QUARTUS/PARTEGERAMACA/LFSR.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}}

@@ -1,0 +1,90 @@
+|jogando
+
+
+|jogando|main:bench
+clk => clk.IN3
+start => always0.IN1
+w => w.IN1
+a => a.IN1
+s => s.IN1
+d => d.IN1
+game_over <= game_over~reg0.DB_MAX_OUTPUT_PORT_TYPE
+win <= win~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[0] <= tamanho[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[1] <= tamanho[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[2] <= tamanho[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[3] <= tamanho[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[4] <= tamanho[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[5] <= tamanho[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tamanho[6] <= tamanho[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jogando|main:bench|InputsBotao:uut
+clock => direcao[0]~reg0.CLK
+clock => direcao[1]~reg0.CLK
+clock => direcao[2]~reg0.CLK
+clock => direcao[3]~reg0.CLK
+w => always0.IN1
+a => always0.IN1
+s => always0.IN1
+d => always0.IN1
+direcao[0] <= direcao[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+direcao[1] <= direcao[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+direcao[2] <= direcao[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+direcao[3] <= direcao[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jogando|main:bench|NumeroAleatorio:uux
+clock => clock.IN1
+semente[0] => semente[0].IN1
+semente[1] => semente[1].IN1
+semente[2] => semente[2].IN1
+semente[3] => semente[3].IN1
+aleatorio[0] <= aleatorio[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[1] <= aleatorio[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[2] <= aleatorio[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[3] <= aleatorio[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jogando|main:bench|NumeroAleatorio:uux|LFSR:lfsr
+clock => aleatorio[0]~reg0.CLK
+clock => aleatorio[1]~reg0.CLK
+clock => aleatorio[2]~reg0.CLK
+clock => aleatorio[3]~reg0.CLK
+semente[0] => aleatorio.DATAB
+semente[1] => aleatorio.DATAB
+semente[2] => aleatorio.DATAB
+semente[3] => aleatorio.DATAB
+aleatorio[0] <= aleatorio[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[1] <= aleatorio[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[2] <= aleatorio[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[3] <= aleatorio[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jogando|main:bench|NumeroAleatorio:uuy
+clock => clock.IN1
+semente[0] => semente[0].IN1
+semente[1] => semente[1].IN1
+semente[2] => semente[2].IN1
+semente[3] => semente[3].IN1
+aleatorio[0] <= aleatorio[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[1] <= aleatorio[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[2] <= aleatorio[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[3] <= aleatorio[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|jogando|main:bench|NumeroAleatorio:uuy|LFSR:lfsr
+clock => aleatorio[0]~reg0.CLK
+clock => aleatorio[1]~reg0.CLK
+clock => aleatorio[2]~reg0.CLK
+clock => aleatorio[3]~reg0.CLK
+semente[0] => aleatorio.DATAB
+semente[1] => aleatorio.DATAB
+semente[2] => aleatorio.DATAB
+semente[3] => aleatorio.DATAB
+aleatorio[0] <= aleatorio[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[1] <= aleatorio[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[2] <= aleatorio[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aleatorio[3] <= aleatorio[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

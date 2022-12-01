@@ -1,0 +1,36 @@
+{C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/main.v} {1 {vlog -work work -stats=none {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/main.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module main
+
+Top level modules:
+	main
+
+} {} {}} {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/NumeroAleatorio.v} {1 {vlog -work work -stats=none {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/NumeroAleatorio.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module NumeroAleatorio
+
+Top level modules:
+	NumeroAleatorio
+
+} {} {}} {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/teste1_testebench.v} {1 {vlog -work work -stats=none {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/teste1_testebench.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module teste1_testbench
+
+Top level modules:
+	teste1_testbench
+
+} {} {}} {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/LFSR.v} {1 {vlog -work work -stats=none {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/LFSR.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}} {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/InputsBotao.v} {1 {vlog -work work -stats=none {C:/Users/joaop/OneDrive/Documentos/QUARTUS/PCS3115 - projeto/InputsBotao.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InputsBotao
+
+Top level modules:
+	InputsBotao
+
+} {} {}}

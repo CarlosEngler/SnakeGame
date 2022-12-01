@@ -1,0 +1,29 @@
+module NumeroAleatorio (
+	input clock, 
+	input [3:0] semente,
+	output reg [3:0] aleatorio
+);
+
+	wire [3:0] seqAleat, bitAleat;
+	reg [2:0] aux; 
+
+	initial 
+	begin 
+		aleatorio <= 40; 
+		aux <= 0;
+	end 
+
+	LFSR lfsr(
+		.clock(clock),
+		.semente(semente),
+		.aleatorio(seqAleat)
+);
+
+	assign bitAleat = seqAleat[0];
+
+	always@(posedge clock)
+	begin 
+		aleatorio[aux] = bitAleat;
+		aux = (aux == 3) ? 0 : aux + 1;
+	end 
+endmodule
