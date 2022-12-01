@@ -5,9 +5,9 @@
 A pasta "codigos" também no diretório inicial é a pasta com apenas os arquivos .v que utilizamos para a compilação e simulação efetiva do projeto.
 Com a adição da testbench "jogando.v".
 
- Para esse projeto, utilizamos o Quartus Prime Lite para desenvolver os códigos, o Questasim e o Modelsim para o simularmos.
+ Para esse projeto, utilizamos o Quartus Prime Lite para desenvolver os códigos, o Questa e o Modelsim para o simularmos.
 A maior parte dos códigos foi simulada independentemente e posteriomente unida no código Main.v, dentro dos always nela encontrados.  <br>
-O Projeto foi dividido em algumas partes consideradas essenciais: A leitura dos inputs de 4 botôes e a sua ordenação, 
+O Projeto foi dividido em algumas partes consideradas essenciais: A leitura dos inputs de 4 botões e a sua ordenação, 
 a movimentação da cobra (da sua cabeça e do seu corpo), a checagem das colisões (com a parede, com o próprio corpo e com a maçã) e
 a geração de uma maçã em uma posição aleatória (por meio do uso de LFSR). <br>
 
